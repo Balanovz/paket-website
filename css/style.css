@@ -28,7 +28,7 @@ a:focus{
     width: 100%;
     top: 0;
     position: fixed;
-    z-index: 100;
+    z-index: 1;
     background-color: #c7c7c7;
     justify-content:space-between;
     align-items: center;
