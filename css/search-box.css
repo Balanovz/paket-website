@@ -1,0 +1,60 @@
+.search-box 
+{
+    background: #666;
+height: 40px;
+border-radius: 40px;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+
+.search-box:hover > .search-txt 
+{
+    width:120px;
+    padding: 0 8px;
+}
+
+
+.search-box:hover > .search-btn 
+{
+background: white;
+color: black;
+}
+
+
+.search-btn 
+{
+color: #eeeeee;
+width: 40px;
+height: 40px;
+border-radius: 50%;
+background: #3b3b3b;
+display: flex;
+justify-content: center;
+align-items: center;
+transition: 0.4s;
+color: white;
+cursor: pointer;
+text-decoration:none;
+}
+
+
+.search-btn > i 
+{
+font-size: 20px;
+}
+
+.search-txt
+{
+border: none;
+background: none;
+outline: none;
+float: left;
+padding: 0;
+color: white;
+font-size: 16px;
+transition: 0.4s;
+line-height: 40px;
+width: 0px;
+}

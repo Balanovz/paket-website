@@ -1,0 +1,107 @@
+.menu
+{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+/*отключение изображения значка checkbox*/
+#menu-toggle
+{
+    opacity: 0;
+}
+
+/*повороты линий при нажатии*/
+#menu-toggle:checked + .menu-btn > span 
+{
+transform: rotate(45deg);
+}
+
+#menu-toggle:checked + .menu-btn > span::before
+{
+top: 0;
+transform: rotate(0deg);
+}
+
+#menu-toggle:checked + .menu-btn > span::after 
+{
+top: 0;
+transform: rotate(90deg);
+}
+
+#menu-toggle:checked ~ .menu-box 
+{
+top: 0;
+}
+
+/*блок содержащий кнопку меню-бургера*/
+.menu-btn 
+{
+display: flex;
+align-items: center;
+margin-right:20px;
+position: fixed;
+width: 30px;
+height: 30px;
+cursor: pointer;
+background-color:transparent;
+z-index: 1;
+}
+
+/*отрисовка полос меню-бургера*/
+.menu-btn > span,
+.menu-btn > span::before,
+.menu-btn > span::after 
+{
+display: block;
+position: absolute;
+background-color: #333;
+width: 100%;
+height: 2px;
+transition-duration: .25s;
+}
+
+.menu-btn > span::before 
+{
+content: '';
+top: -8px;
+}
+
+.menu-btn > span::after 
+{
+content: '';
+top: 8px;
+}
+
+/*выдвижная панель*/
+.menu-box 
+{
+display:block;
+position:fixed;
+top: -100%;
+width: 100%;
+height: 500px;
+margin: 0;
+padding: 60px 0;
+list-style: none;
+background-color: #ECEFF1;
+box-shadow: 2px 2px 6px rgba(0, 0, 0, .4);
+transition-duration: .25s;
+}
+
+.menu-item 
+{
+display: block;
+padding: 12px 24px;
+color: #333;
+font-size: 20px;
+font-weight: 600;
+text-decoration: none;
+transition-duration: .25s;
+}
+
+.menu-item:hover 
+{
+background-color: #CFD8DC;
+}

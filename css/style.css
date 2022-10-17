@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Commissioner&family=Manrope:wght@700&display=swap');
+
+
+html, body
+{
+    margin: 0;
+    font-family: 'Commissioner', sans-serif;
+}
+
+*, *::before, *::after{
+    box-sizing: border-box;
+    outline: none;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+a:hover,
+a:focus{
+    color:#777777;
+}
+
+.top-nav{
+    display: flex;
+    width: 100%;
+    top: 0;
+    position: fixed;
+    z-index: 100;
+    background-color: #c7c7c7;
+    justify-content:space-between;
+    align-items: center;
+    padding:10px 0 8px;
+    border-bottom: 1px solid black;
+}
+
+.text-logo
+{
+    display: flex;
+    justify-content: center;
+    font-family: 'Rubik Mono One', sans-serif;
+    font-size:xx-large;
+}
+
+.wrap{
+    box-sizing: border-box;
+    margin: 0 auto;
+    max-width: 1320px;
+    padding: 0 20px;
+    position: relative;
+}
+
+.new-section-header
+{
+    text-transform: uppercase;
+    margin: 30px 0 50px 0;
+}
