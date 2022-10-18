@@ -25,6 +25,7 @@ a:focus{
 
 .logo{
     z-index: 200;
+    left: 0;
 }
 
 .top-nav{
