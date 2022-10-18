@@ -35,7 +35,6 @@ a:focus{
     top: 0;
     left: 0;
     background-color: #c7c7c7;
-    justify-content:flex-start;
     align-items: center;
     padding:10px 0;
     border-bottom: 1px solid black;
