@@ -29,10 +29,10 @@ a:focus{
 
 .top-nav{
     display: flex;
+    position:fixed;
+    z-index: 100;
     width: 100%;
     top: 0;
-    position: fixed;
-    z-index: 2;
     background-color: #c7c7c7;
     justify-content:space-between;
     align-items: center;
