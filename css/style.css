@@ -31,7 +31,7 @@ a:focus{
     display: flex;
     position:fixed;
     z-index: 100;
-    width: 100%;
+    width: 100vw;
     top: 0;
     left: 0;
     background-color: #c7c7c7;
