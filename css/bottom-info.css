@@ -1,0 +1,38 @@
+.copyright{
+    text-align: center;
+}
+
+.footer{
+    padding-top:30px;
+    background-color: #1f1f1f;
+    color: #ffffff;
+    font-size: 14px;
+    height: auto;
+    width: 100%;
+}
+
+.footer-menu ul{
+    display: flex;
+    width: 100vw;
+    justify-content: space-around;
+    list-style: none;
+    padding: 0;
+}
+
+.footer-menu{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding:20px 0;
+}
+
+.footer a{
+    color: white;
+}
+.footer a:hover{
+    color:#858585;
+}
+
+.footer-down{
+    text-align: center;
+}
