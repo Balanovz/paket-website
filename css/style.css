@@ -13,7 +13,8 @@ html, body
     outline: none;
 }
 
-a{
+a
+{
     text-decoration: none;
     color: black;
 }
@@ -24,21 +25,21 @@ a:focus{
 }
 
 .logo{
-    z-index: 200;
+    z-index: 6;
     left: 0;
 }
 
 .top-nav{
     display: flex;
     position:fixed;
-    z-index: 100;
+    z-index: 4;
     width: 100vw;
     height: 80px;
     top: 0;
     left: 0;
     background-color: #c7c7c7;
     align-items: center;
-    padding:20px 0 10px 0;
+    padding:24px 0 10px 0;
     border-bottom: 1px solid black;
 }
 
