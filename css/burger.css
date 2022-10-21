@@ -46,8 +46,10 @@ width: 30px;
 height: 30px;
 cursor: pointer;
 background-color:transparent;
-z-index:200;
+z-index:6;
 }
+
+
 
 /*отрисовка полос меню-бургера*/
 .menu-btn > span,
@@ -74,6 +76,7 @@ content: '';
 top: 8px;
 }
 
+
 /*выдвижная панель*/
 .menu-box 
 {
@@ -89,7 +92,7 @@ list-style: none;
 background-color: rgba(0, 0, 0, 0.633);
 box-shadow: 2px 2px 6px rgba(0, 0, 0, .4);
 transition-duration: .25s;
-z-index: 120;
+z-index: 5;
 color: white;
 }
 
