@@ -1,19 +1,26 @@
+import { TodoForm } from './TodoForm'
+import { TodoList } from './TodoList'
 import './styles.css'
-import {useState} from 'react'
+import {useState, useEffect} from 'react'
 
 function App() {
-  const [item, setItem] = useState('')
-  const [todos, setTodos] = useState([])
+  const [todos, setTodos] = useState(() =>{
+    const localValue = localStorage.getItem("ITEMS")
+    if(localValue == null) return []
+    return JSON.parse(localValue)
+  })
 
-  function handleSubmit (e) {
-    e.preventDefault()
+  useEffect(() => {
+    localStorage.setItem("ITEMS", JSON.stringify(todos))
+  }, [todos])
+
+  function addTodo(title) {
     setTodos(
-      [
-        ...todos, 
-        {id: crypto.randomUUID, title:item, completed: false}
-      ]
-    )
-    setItem('')
+          [
+            ...todos, 
+            {id: crypto.randomUUID(), title, completed: false}
+          ]
+        )
   }
 
   function toggleTodo(id, completed) {
@@ -26,32 +33,9 @@ function App() {
     setTodos(todos => todos.filter(todo => todo.id !== id))
   }
 
-  return <>
-    <form onSubmit={handleSubmit} className='new-item-form'>
-      <div className='form-row'>
-        <label htmlFor='item'>New Item</label>
-        <input value={item} onChange={e => setItem(e.target.value)} type="text" id="item" />
-      </div>
-      <button className='btn'>Add</button>
-    </form>    
-    <h1 className='header'>Todo list</h1>
-    <ul className='list'>
-      {
-        todos.map(td => 
-          <li key={td.id}>
-            <label>
-            <input 
-            type='checkbox' 
-            checked={td.completed}
-            onChange={e => toggleTodo(td.id, e.target.checked)}
-            />
-            {td.title}
-          </label>
-          <button className='btn btn-danger' onClick={deleteTodo} >Delete</button>
-          </li>
-        )
-      }
-    </ul>
+  return <>  
+    <TodoForm onSubmit={addTodo} />
+    <TodoList todos={todos} deleteTodo={deleteTodo} toggleTodo={toggleTodo} />
   </>
 }
 
